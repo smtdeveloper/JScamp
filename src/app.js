@@ -20,7 +20,7 @@ if(USDToday > USDYesterday){
         console.log("Dolar aynı img")
     }
 
-    const EuroDun = 11.20
+    const EuroDun = 4.20
     
     console.log( "Euro Dun : "  + EuroDun)
 
