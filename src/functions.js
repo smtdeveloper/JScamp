@@ -123,4 +123,3 @@ let newproductName, newunitPrice, newquantity
     console.log(newquantity)
 
 
-console.log("2.GÜN SONU")
