@@ -67,15 +67,15 @@ if(USDToday > USDYesterday){
 
         let User1 =  {Id:1 , Name: "Engin" , Phone: "444444" , TC: "9999999" , Maas:"8000" }
         let User2 =  {Id:2 , Name: "Samet" , Phone: "555555" , TC: "66666" , Maas:"15000" }
-        let User3 =  {Id:3 , Name: "Sinem" , Phone: "666666" , TC: "777777" , Maas:"25000" }
+       
 
         function Save(user){
             console.log(user.Name + " : " + user.Maas + " TL ")
         }
 
-        Save(User3); 
+        Save(User2); 
 
-        let users = ["Samet","Sinem","Engin"]
+        let users = ["Samet","Engin"]
        console.log(users)
       
       

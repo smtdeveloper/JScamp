@@ -83,7 +83,7 @@ let products = [
 
 AddToCart4(products)
 
-// rest - toparlar
+// rest ... toparlar
 function add(...numbers) {
     let total = 0;
    for (let i = 0; i< numbers.length; i++) {
@@ -95,7 +95,7 @@ function add(...numbers) {
 add(10,20)
 add(10,20,50)
 
-// spread - ayrılma
+// spread - ... ayrılır
 let numbers = [10,20,44,22,55,11,88,99,17,52,44,24]
 console.log(Math.max(...numbers))
 
@@ -113,6 +113,8 @@ let [kütahya,istanbul,aydın,[icAnadoluCities]] = city
 
 console.log(kütahya)
 console.log(icAnadoluCities)
+
+
 
 let newproductName, newunitPrice, newquantity
 ({productName:newproductName, unitPrice:newunitPrice , quantity:newquantity}
