@@ -27,8 +27,36 @@ function sayilar(...sayilar) {
 
 }
 
-sayilar(10,5,1,2,8,11,52);
+sayilar(1,10,5,1,2,8,11,52);
 
+//v2
+function checkPrimes(...numbers) {
+    for (let number of numbers) {
+      if (isPrime(number)) {
+        console.log(`${number} is a prime number.`);
+      } else {
+        console.log(`${number} is not a prime number.`);
+      }
+    }
+  }
+  
+  function isPrime(number) {
+    if (number < 2) {
+      return false;
+    }
+  
+    for (let i = 2; i < number; i++) {
+      if (number % i === 0) {
+        return false;
+      }
+    }
+  
+    return true;
+  }
+  
+  // Örnek kullanım
+  checkPrimes(1,2, 3, 4, 5, 6, 7, 8, 9, 10);
+  
 
 console.log("  2.ödev  ")
 // 2 - Parametre olarak girilen iki sayının arkadaş sayılar olup olmadığını bulan programı yazınız.
@@ -41,7 +69,6 @@ function NumberOfFriends(sayi1,sayi2) {
     for(let i=1;i<sayi1;i++){
 
         if(sayi1%i==0)
-
         sayi1Top +=i;
     }
     for(let i=1;i<sayi2;i++){
@@ -56,13 +83,30 @@ function NumberOfFriends(sayi1,sayi2) {
 
            console.log("Arkadaş Sayılardır.")
         }
-    else   console.log("Arkadaş Sayılar Değildir.")
+    else   console.log("Arkadaş Sayı Değildir.")
 
 }
 
 
 NumberOfFriends(220,284)
 
+//V2
+function areFriendly(x, y) {
+    // Karekökünü alın ve tam sayı olup olmadığına bakın
+    const root = Math.sqrt(x + y);
+    if (Number.isInteger(root)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+  // Örnek kullanım
+  console.log(areFriendly(220, 284)); // true
+  console.log(areFriendly(1184, 1210)); // true
+  console.log(areFriendly(500, 500)); // false
+  console.log(areFriendly(1, 2)); // false
+  
 
 console.log("  3.ödev  ")
 // 3 - 1000'e kadarki tüm mükemmel sayıları listeleyen programı yazınız.
@@ -93,10 +137,10 @@ console.log(getPerfectNumbers(1000));
 console.log("  4.ödev  ")
 // 4 - 1000'e kadarki tüm asal sayıları listeleyen programı yazınız.
 
- function asalSayilar() {
+ function asalSayilar(n) {
     let sayac = 0;
   
-    for (let sayi = 2; sayi < 1000; sayi++) {
+    for (let sayi = 2; sayi < n; sayi++) {
     
         let kontrol = 0;
         for (let i = 2; i < sayi; i++)
@@ -109,13 +153,13 @@ console.log("  4.ödev  ")
             }
             if(kontrol==0)
             {
-                console.log(sayi);
+                console.log(sayi + " Asal Sayı");
                 sayac++; 
             }
     }
  }
 
- asalSayilar();
+ asalSayilar(10);
 
 
 //  Kodlarınızı github'da paylaşınız.
